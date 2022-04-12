@@ -64,6 +64,10 @@ def logout() -> bool:
     logged_in_user = None
     return True
 
+def selectUser(id) -> User:
+    users = load()
+    return users[id]
+
 
 def changePassword(password) -> bool:
     if not isLogged(): # 未登录
